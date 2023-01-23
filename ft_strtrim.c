@@ -50,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /*int main()
 {
- 	printf("%s\n", ft_strtrim("abqbc", "abc"));
- 	printf("%s\n", ft_strtrim("xavocadoyz", "xyz"));
+ 	printf("%s\n", ft_strtrim("abqbc", "abc")); ///q
+ 	printf("%s\n", ft_strtrim("xavocadoyz", "xyz")); //avocado
  	return 0;
 }*/

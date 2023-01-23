@@ -47,3 +47,14 @@ size_t  ft_strlcat(char *dest, const char *src, size_t size)
     printf("%zu \n", ft_strlcat(dest, src, 10));
         printf("%s \n", dest);
 }*/
+
+/*int main(void)
+{
+    char dest[20] = "Hello";
+    char src[] = " World";
+    size_t size = sizeof(dest);
+    size_t result = ft_strlcat(dest, src, size);
+    printf("Result: %s\n", dest);
+    printf("Size: %zu\n", result);
+    return 0;
+}*/
