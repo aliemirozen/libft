@@ -9,8 +9,8 @@
 /*   Updated: 2023/01/22 12:43:21 by aliemirozen      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
+#include "stdio.h"
 
 static long	ft_digitnb(int n)
 {
@@ -64,3 +64,8 @@ char	*ft_itoa(int n)
 		fresh[0] = '-';
 	return (fresh);
 }
+
+/*int main()
+{
+	printf("%s", ft_itoa(-13562));
+}*/

@@ -20,7 +20,7 @@ void	ft_putendl_fd(char *s, int fd)
 /*int main()
 {
     int fd ;
-    fd = open("deneme.txt", 777);
-    char *k =  "Esra Budak\n";
+    fd = 1;
+    char *k =  "aliemirozen\n";
     ft_putendl_fd(k, fd);
 }*/

@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
-	int	res;
+	int	result;
 
 	i = 0;
 	sign = 1;
-	res = 0;
+	result = 0;
 	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 		i++;
 	while (str[i] == '+' || str[i] == '-')
@@ -30,8 +31,13 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (str[i] - '0') + (res * 10);
+		result = (str[i] - '0') + (result * 10);
 		i++;
 	}
-	return (res * sign);
+	return (result * sign);
 }
+
+/*int main()
+{
+	printf("%d", ft_atoi("-13562"));
+}*/

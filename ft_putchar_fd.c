@@ -10,15 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
 
-/*  int		main()
+/*int main()
 {
-    int fd ;
-    fd = open("deneme.txt", 777);
-    ft_putchar_fd('x', fd);
+    char test_char = 'A';
+    int fd = 1; // 1 is the file descriptor for stdout
+
+    ft_putchar_fd(test_char, fd);
+    printf("\n");
+    return 0;
 }*/

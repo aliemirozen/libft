@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+#include "stdio.h"
+#include <fcntl.h>
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
@@ -27,3 +28,17 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
+
+/*int		main(void)
+{
+	int fd;
+
+	fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
+	ft_putnbr_fd(42, fd);
+	ft_putnbr_fd(-42, fd);
+	ft_putnbr_fd(0, fd);
+	ft_putnbr_fd(2147483647, fd);
+	ft_putnbr_fd(-2147483648, fd);
+	close(fd);
+	return (0);
+}*/

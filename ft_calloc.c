@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+#include "stdio.h"
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
@@ -22,14 +22,15 @@ void	*ft_calloc(size_t count, size_t size)
 	return (p);
 }
 
-/*int main(void)
+int main(void)
  {
     int *a;
     int  b;
 	a = (int *) ft_calloc(10, sizeof(int));
+		printf("a = %d\n", *a);
 	    for (b=0; b<10; b++) {
          *(a+b) = (b+1) * 5;
         printf("%p adresindeki değer: %d\n", (a+b), *(a+b));
 		}
 		free(a);
-}*/
+}

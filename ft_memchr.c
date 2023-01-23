@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+#include "stdio.h"
 void    *ft_memchr(const void *s, int c, size_t n)
 {
     unsigned char    *str;
@@ -30,8 +30,10 @@ void    *ft_memchr(const void *s, int c, size_t n)
         return ((void *)s + i);
     return (NULL);
 }
+
 /*int main()
 {
   char b[] = "Ali Emir Özen";
-  printf("%s", ft_memchr(b,'m' , 6));
+  char *a = ft_memchr(b ,'m' ,6);
+  printf("%s", a);
 }*/

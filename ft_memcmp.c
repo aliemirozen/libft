@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 int    ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -32,7 +33,7 @@ int    ft_memcmp(const void *s1, const void *s2, size_t n)
 /*int main()
 {
   char s1[] = "aliemirozen";
-  char s2[] = "ali";
+  char s2[] = "alimeirozen";
   
-  printf("%d", ft_memcmp(s1, s2, 10));
+  printf("%d", ft_memcmp(s1, s2, ft_strlen(s1)));
 }*/

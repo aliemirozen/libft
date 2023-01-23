@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -29,3 +30,9 @@ char	*ft_strdup(const char *s1)
 	temp[coun] = '\0';
 	return (temp);
 }
+
+/*int main()
+{
+	char *a = ft_strdup("Galatasaray ****");
+	printf("%s", a);
+}*/

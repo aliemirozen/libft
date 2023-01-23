@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -52,7 +53,8 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 
 /*int main()
 {
-  char dest[] = "aliemirozen";
-  char srcc[] = "can";
-  printf("%s\n", ft_memmove(dest, srcc, 4));
+  char knks[] = "aliemirozen";
+  char kirve[] = "cancazimknksbro";
+  char *a = ft_memmove(knks, kirve, 4);
+  printf("%s\n", a);
 }*/

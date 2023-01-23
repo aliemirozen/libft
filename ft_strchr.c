@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -18,6 +19,6 @@ char	*ft_strchr(const char *s, int c)
 
 /*int main()
 {
-    char *k = "Bilgisayar";
-    printf("%s", ft_strrchr(k, 'a'));
+    char *a = "Bilgisayar";
+    printf("%s", ft_strrchr(a, 'i'));
 }*/

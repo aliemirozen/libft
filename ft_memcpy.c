@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -33,7 +34,7 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
 /*int main()
 {
   char ali[] = "aliemirozen";
-  char emir[] = "can";
-  printf("%s", ft_memcpy(ali, emir, 7));
-
+  char emir[] = "cancazimknksbro";
+  char *a = ft_memcpy(ali, emir, 13);
+  printf("%s", a);
 }*/
