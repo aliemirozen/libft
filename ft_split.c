@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 static int	wordcounter(const char *s, char c)
 {
@@ -66,8 +67,23 @@ char	**ft_split(char const *s, char c)
 	ret[retindex] = NULL;
 	return (ret);
 }
-/*
-void test_ft_split(char const *s, char c)
+
+/*int main()
+{
+	int i;
+	i = 0;
+        char **a;
+        a = ft_split("**** GALATASARAY SAMPIYON 1905", ' ');
+		while(a[i] != NULL)
+		{
+			printf("%s\n",a[i]);
+			i++;
+		}        
+}*/
+
+
+
+/*void test_ft_split(char const *s, char c)
 {
     char **split_strings = ft_split(s, c);
     int i = 0;
@@ -85,20 +101,4 @@ int main(void)
     char c = ' ';
     test_ft_split(s, c);
     return 0;
-}
-*/
-
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int main()
-{
-        int i = 0;
-        char **a;
-        a = ft_split("marhaba.selamlar.mmm", '.');
-        printf("%s\n",a[0]);
-        printf("%s\n",a[1]);
-        printf("%s",a[2]);
-        
 }*/
