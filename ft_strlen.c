@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -20,3 +21,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+/*int main()
+{
+	printf("%zu", ft_strlen("Galatasaray Şampiyon"));
+}*/

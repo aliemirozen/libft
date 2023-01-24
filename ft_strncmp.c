@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -24,3 +25,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i--;
 	return (s1[i] - s2[i]);
 }
+
+/*int main()
+{
+	char s1[] = "z";
+	char s2[] = " ";
+	printf("%c", ft_strncmp(s1,s2,1));
+}*/

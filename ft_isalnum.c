@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 int	ft_isalnum(int c)
 {
@@ -18,3 +19,9 @@ int	ft_isalnum(int c)
 	else
 		return(0);
 }
+
+/*int main()
+{
+	int a = 'g';
+	printf("%d", ft_isalnum(a));
+}*/

@@ -42,3 +42,8 @@ void	ft_putnbr_fd(int n, int fd)
 	close(fd);
 	return (0);
 }*/
+
+/*int main()
+{
+  ft_putnbr_fd(-36281, 1);
+}*/

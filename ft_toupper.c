@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 int	ft_toupper(int c)
 {
@@ -17,3 +18,8 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+
+/*int main()
+{
+	printf("%c", ft_toupper('a'));
+}*/

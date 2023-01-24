@@ -32,12 +32,12 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     return (new_str);
 }
 
-char test_func(unsigned int i, char c) {
+/*char test_func(unsigned int i, char c) {
     // this function will increment each character in the string by i
     return c + i;
 }
 
-/*int main() {
+int main() {
     char *test_str = "Hello World";
     char *new_str = ft_strmapi(test_str, test_func);
 
