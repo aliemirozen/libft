@@ -10,34 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t src_len;
+	size_t	i;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
-	src_len = ft_strlen(src);
-	if (!dstsize)
-		return (src_len);
-	while (src[i] != '\0' && i < dstsize)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize < src_len)
-		dst[dstsize - 1] = '\0';
-	else if (dstsize != 0)
-		dst[i] = '\0';
-	return (src_len);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
-
-/*int main()
-{
-	char dest[] = "ali emir knks";
-	char srcc[] = "bum";
-	printf("%zu\n", ft_strlcpy(dest, srcc, 2));
-	printf("%s", dest);
-}*/

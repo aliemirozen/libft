@@ -6,46 +6,36 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 12:49:20 by alozen            #+#    #+#             */
-/*   Updated: 2022/12/08 13:26:44 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:44:04 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <stdio.h>
 
-
-size_t  ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t  i;
-    size_t  dsize;
+	size_t	i;
+	size_t	coun;
 
-    dsize = 0;
-    while (dest[dsize] != '\0' && dsize < size)
-        dsize++;
-    i = dsize;
-    while (src[dsize - i] && dsize + 1 < size)
-    {
-        dest[dsize] = src[dsize - i];
-        dsize++;
-    }
-    if (i < size)
-        dest[dsize] = '\0';
-     return (i + ft_strlen(src));
+	if (!dstsize && !dst)
+		return (0);
+	if (dstsize <= (size_t)ft_strlen(dst))
+		return (dstsize + ft_strlen(src));
+	i = ft_strlen(dst);
+	coun = 0;
+	while ((i + 1 < dstsize) && (src[coun] != '\0'))
+	{
+		dst[i] = src[coun];
+		i++;
+		coun++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(dst) + ft_strlen(&src[coun]));
 }
 
-/*int main (void)
+/*int main()
 {
-    char src[] = "ali emir";
-        char dest [] = "Ozens 42";
-    printf("%zu \n", ft_strlcat(dest, src, 10));
-        printf("%s \n", dest);
-}*/
-
-/*int main(void)
-{
-    char dest[20] = "Hello";
-    char src[] = " World";
-    size_t size = sizeof(dest);
-    size_t result = ft_strlcat(dest, src, size);
-    printf("Result: %s\n", dest);
-    printf("Size: %zu\n", result);
-    return 0;
+	char dst[] = "Galatasaray";
+	char src[] = "bumbum";
+	printf("%zu", ft_strlcat(dst, src, 5));
 }*/

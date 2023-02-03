@@ -6,7 +6,7 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 10:14:05 by alozen            #+#    #+#             */
-/*   Updated: 2022/12/07 11:16:54 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:30:46 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,30 +14,34 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	result;
+	long	coun;
+	long	np;
+	long	number;
 
-	i = 0;
-	sign = 1;
-	result = 0;
-	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
-		i++;
-	while (str[i] == '+' || str[i] == '-')
+	coun = 0;
+	np = 1;
+	number = 0;
+	if (str[0] == '\0')
+		return (coun);
+	while (str[coun] == ' ' || str[coun] == '\t' || str[coun] == '\f' || \
+			str[coun] == '\r' || str[coun] == '\n' || str[coun] == '\v')
+		coun++;
+	if (str[coun] == '-' || str[coun] == '+')
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		if (str[coun] == '-')
+			np *= -1;
+		coun++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[coun] && str[coun] >= '0' && str[coun] <= '9')
 	{
-		result = (str[i] - '0') + (result * 10);
-		i++;
+		number = number * 10 + (str[coun] - '0');
+		coun++;
 	}
-	return (result * sign);
+	number *= np;
+	return (number);
 }
 
 /*int main()
 {
-	printf("%d", ft_atoi("-13562"));
+	printf("%d", ft_atoi("      -2239724"));
 }*/

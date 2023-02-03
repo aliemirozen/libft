@@ -28,18 +28,31 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-/*int main() {
-    char test_str[20] = "Hello, World!";
-    char check_str[20] = "Hello, World!";
+/*int main()
+{
+	char b[] = "Galatasaray";
+	ft_memset(&b[1], '4', 1);
+	ft_memset(&b[3], '4', 1);
+	ft_memset(&b[5], '4', 1);
+	ft_memset(&b[7], '4', 1);
+	ft_memset(&b[9], '4', 1);
+	printf("%s", b);
+}*/
 
-    printf("Original string: %s\n", test_str);
-    ft_memset(test_str, 'A', 5);
-    printf("Modified string: %s\n", test_str);
-    memset(check_str, 'A', 5);
-    if (strcmp(test_str, check_str) == 0) {
-        printf("ft_memset is working correctly!\n");
-    } else {
-        printf("ft_memset is not working correctly.\n");
-    }
-    return 0;
+/*int main()
+{
+	char b[] = "Galatasaray";
+	printf("%s", (char *)ft_memset(b, '*', 6));
+}*/
+
+/*int main()
+{
+	int b[] = {3,13,34,98,9};
+	ft_memset(&b[0], 14, 1);
+	ft_memset(&b[1], 14, 1);
+	int i = 0;
+	while (i < 5)
+	{
+		printf("%d\n", b[i++]);
+	}	
 }*/

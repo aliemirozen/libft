@@ -6,11 +6,11 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 14:56:20 by alozen            #+#    #+#             */
-/*   Updated: 2023/01/04 14:56:25 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:42:26 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "stdio.h"
+#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,6 +33,6 @@ char	*ft_strdup(const char *s1)
 
 /*int main()
 {
-	char *a = ft_strdup("Galatasaray ****");
-	printf("%s", a);
+	char s1[] = "Galatasaray Sampiyon Bro";
+	printf("%s", ft_strdup(s1));
 }*/

@@ -6,19 +6,12 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 18:08:19 by alozen            #+#    #+#             */
-/*   Updated: 2022/12/10 18:08:23 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:41:41 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "stdio.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	return (ft_memchr(s, c, ft_strlen(s) + 1));
 }
-
-/*int main()
-{
-    char *a = "Bilgisayar";
-    printf("%s", ft_strrchr(a, 'i'));
-}*/

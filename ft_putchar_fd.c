@@ -6,11 +6,11 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:50:20 by alozen            #+#    #+#             */
-/*   Updated: 2023/01/18 16:50:44 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:36:21 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "stdio.h"
+#include <fcntl.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -19,10 +19,7 @@ void	ft_putchar_fd(char c, int fd)
 
 /*int main()
 {
-    char test_char = 'A';
-    int fd = 1; // 1 is the file descriptor for stdout
-
-    ft_putchar_fd(test_char, fd);
-    printf("\n");
-    return 0;
+	int fd;
+	fd = open("zzz.txt", O_RDWR | O_CREAT, 0777);
+	ft_putchar_fd('c', fd);
 }*/

@@ -6,7 +6,7 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 09:55:18 by alozen            #+#    #+#             */
-/*   Updated: 2022/12/07 09:58:03 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:45:03 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -24,5 +24,5 @@ size_t	ft_strlen(const char *str)
 
 /*int main()
 {
-	printf("%zu", ft_strlen("Galatasaray Şampiyon"));
+	printf("%zu", ft_strlen("galalmam"));
 }*/

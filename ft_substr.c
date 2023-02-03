@@ -24,7 +24,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
-		//bura mesela 5. elemandan sonra 2 eleman var ama len=3 burası len i kalan elemana eşitliyor.
 	dest = malloc(len + 1);
 	if (!dest)
 		return (NULL);
@@ -35,8 +34,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /*int main()
 {
-	char* str;
-	str = ft_substr("Hello, 42Seoul!", 7, 2);
-	printf("%s\n", str);
-	return 0;
+	char s[] = "Sampiyon Galatasaray";
+	printf("%s", ft_substr(s, 9, ft_strlen("Galatasaray")));
 }*/

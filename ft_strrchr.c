@@ -9,28 +9,27 @@
 /*   Updated: 2022/12/14 11:04:04 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
+#include "stdio.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int        i;
-    char    *ptr;
+	int	coun;
 
-    i = 0;
-    ptr = 0;
-    while (s[i])
-    {
-        if (s[i] == c)
-            ptr = (char *)(s + i);
-        i++;
-    }
-    if (s[i] == c)
-        ptr = (char *)(s + i);
-    return (ptr);
+	coun = 0;
+	while (s[coun])
+		coun++;
+	while (coun >= 0)
+	{
+		if (s[coun] == (char)c)
+			return ((char *)(s + coun));
+		coun--;
+	}
+	return (NULL);
 }
+
 /*int main()
 {
-  char dest[] = "aliemiroz";
-  printf("%s \n", ft_strrchr(dest, 'e'));
+	char s[] = "Galatasaray Sampiyon";
+	printf("%s", ft_strrchr(s, 'a'));
 }*/

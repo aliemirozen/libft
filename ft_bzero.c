@@ -17,7 +17,21 @@ void	ft_bzero(void *s, size_t n)
 	ft_memset(s, 0, n);
 }
 
-/*int main()    //ft_memset(s, '0', n); olsa çıktı 00092 olur. Burda {\0\0\092} oluyor.
+/*int main()
+{
+	char s[] = "Galatasaray";
+	ft_bzero(s, 7);
+	printf("%s\n", s);
+
+	size_t i = 7;
+	while (i < ft_strlen("Galatasaray"))
+	{
+		printf("%c", s[i]);
+		i++;
+	}
+}*/
+
+/*int main()
 {
 	char test[] = "12392";
 	ft_bzero(test, 3);

@@ -6,11 +6,11 @@
 /*   By: aliemirozen <alozen@student.42istanbul.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 22:17:15 by aliemirozen       #+#    #+#             */
-/*   Updated: 2023/01/18 22:18:16 by aliemirozen      ###   ########.fr       */
+/*   Updated: 2023/01/31 16:43:16 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "stdio.h"
+#include <stdio.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -26,12 +26,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-/*void print_index_and_char(unsigned int index, char* c) {
-    printf("Index: %d, Character: %c\n", index, *c);
+/*void ft(unsigned int i, char *c)
+{
+	printf("Index : %d , Karakter : %c\n", i, *c);
 }
 
-int main() {
-    char test_string[] = "Hello, World!";
-    ft_striteri(test_string, &print_index_and_char);
-    return 0;
+int main()
+{
+	char *st1 = ft_strdup("Galatasaray");
+	ft_striteri(st1, ft);
 }*/

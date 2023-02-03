@@ -12,93 +12,62 @@
 #include "libft.h"
 #include "stdio.h"
 
-static int	wordcounter(const char *s, char c)
+int	ft_count(char const *s, char c)
 {
 	int	i;
+	int	count;
 
+	count = 1;
 	i = 0;
-	while (*s)
+	while (s[i])
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s == '\0')
-			return (i);
-		while (*s != c && *s)
-			s++;
-		i++;
+		if (s[i] != c)
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+		else
+			i++;
 	}
-	return (i);
-}
-
-static int	charcounter(const char *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (*s && (*s != c))
-	{
-		i++;
-		s++;
-	}
-	return (i);
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ret;
-	int		retindex;
+	int		i;
+	int		st;
+	char	**str;
 
+	i = 0;
+	st = 0;
 	if (!s)
-		return (0);
-	retindex = 0;
-	ret = malloc(sizeof(char *) * wordcounter(s, c) + 1);
-	if (!ret)
-		return (0);
+		return (NULL);
+	str = malloc((ft_count(s, c)) * sizeof(char *));
+	if (!str)
+		return (NULL);
 	while (*s)
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s == '\0')
-			break ;
-		ret[retindex] = ft_substr(s, 0, charcounter(s, c));
-		retindex++;
-		s = s + charcounter(s, c);
+		if (*s != c)
+		{
+			st = 0;
+			while (*s && *s != c && ++st)
+				++s;
+			str[i++] = ft_substr(s - st, 0, st);
+		}
+		else
+			++s;
 	}
-	ret[retindex] = NULL;
-	return (ret);
+	str[i] = 0;
+	return (str);
 }
 
 /*int main()
 {
-	int i;
-	i = 0;
-        char **a;
-        a = ft_split("**** GALATASARAY SAMPIYON 1905", ' ');
-		while(a[i] != NULL)
-		{
-			printf("%s\n",a[i]);
-			i++;
-		}        
-}*/
-
-
-
-/*void test_ft_split(char const *s, char c)
-{
-    char **split_strings = ft_split(s, c);
-    int i = 0;
-    while (split_strings[i])
-    {
-        printf("%s\n", split_strings[i]);
-        i++;
-    }
-    free(split_strings);
-}
-
-int main(void)
-{
-    char const *s = "This is a test string";
-    char c = ' ';
-    test_ft_split(s, c);
-    return 0;
+	char s[] = "Galatasaray Sampiyon 1905";
+	char c = ' ';
+	char **test = ft_split(s, c);
+	int i = 0;
+	while (i < 3)
+		printf("%s\n", test[i++]);
 }*/

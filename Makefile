@@ -1,3 +1,5 @@
+NAME = libft.a
+
 list=ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
@@ -37,20 +39,18 @@ list=ft_isalnum.c \
 
 OBJS = $(list:.c=.o)
 
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-NAME = libft.a
+
 
 all: $(NAME)
 
-.c.o:
-	$(CC) -c $(CFLAGS) $<
-
 $(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS)
+	ar -crs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(bonusobj)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -59,4 +59,4 @@ re:fclean $(NAME)
 
 norm:
 	norminette *.[ch]
-.PHONY: clean fclean all re bonus norm
+.PHONY: clean fclean all re norm

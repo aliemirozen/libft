@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -32,15 +33,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-/*int main() {
-    const char *haystack = "This is a test string";
-    const char *needle = "test";
-    size_t len = ft_strlen(haystack);
-    char *result = ft_strnstr(haystack, needle, len);
-    if (result != NULL) {
-        printf("The needle was found in the haystack at position: %ld\n", result - haystack);
-    } else {
-        printf("The needle was not found in the haystack.\n");
-    }
-    return 0;
+/*int main()
+{
+	char haystack[] = "Bu sene sampiyon Galatasaray olacak";
+	char needle[] = "sampiyon";
+	printf("%s", ft_strnstr(haystack, needle, ft_strlen(haystack)));
 }*/

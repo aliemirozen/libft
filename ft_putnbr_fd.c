@@ -6,12 +6,12 @@
 /*   By: alozen <alozen@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:52:42 by alozen            #+#    #+#             */
-/*   Updated: 2023/01/18 16:52:45 by alozen           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:37:55 by alozen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "stdio.h"
 #include <fcntl.h>
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
@@ -29,21 +29,12 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-/*int		main(void)
-{
-	int fd;
-
-	fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
-	ft_putnbr_fd(42, fd);
-	ft_putnbr_fd(-42, fd);
-	ft_putnbr_fd(0, fd);
-	ft_putnbr_fd(2147483647, fd);
-	ft_putnbr_fd(-2147483648, fd);
-	close(fd);
-	return (0);
-}*/
-
 /*int main()
 {
-  ft_putnbr_fd(-36281, 1);
+	int n[] = {45678,32972,292,9};
+	int fd;
+	fd = open("zabahlan.txt", O_RDWR | O_CREAT, 0777);
+	int i = 0;
+	while (i < 3)
+		ft_putnbr_fd(n[i++], fd);
 }*/

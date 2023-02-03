@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include "stdio.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -37,9 +38,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-
-/*int main(){
-  char bir[] = "ali";
-  char iki[] = " emir";
-  printf("%s", ft_strjoin(bir, iki));
+/*int main()
+{
+	char s1[] = "Galatasaray ";
+	char s2[] = "Sampiyon";
+	printf("%s", ft_strjoin(s1,s2));
 }*/

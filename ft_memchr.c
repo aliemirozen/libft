@@ -11,29 +11,23 @@
 /* ************************************************************************** */
 #include "libft.h"
 #include "stdio.h"
-void    *ft_memchr(const void *s, int c, size_t n)
-{
-    unsigned char    *str;
-    int                i;
 
-    i = 0;
-    str = (unsigned char *)s;
-    if (n == 0)
-        return (0);
-    while (n-- > 0)
-    {
-        if (str[i] == (unsigned char)c)
-            return ((void *)s + i);
-        i++;
-    }
-    if (c == '\0')
-        return ((void *)s + i);
-    return (NULL);
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	const unsigned char	*p;
+
+	p = s;
+	while (n-- != 0)
+	{
+		if ((unsigned char)c == *p)
+			return ((void *)p);
+		p++;
+	}
+	return (NULL);
 }
 
 /*int main()
 {
-  char b[] = "Ali Emir Özen";
-  char *a = ft_memchr(b ,'m' ,6);
-  printf("%s", a);
+	char s[] = "Galatasaray";
+	printf("%s", (char *)ft_memchr(s, 't', 5));
 }*/
