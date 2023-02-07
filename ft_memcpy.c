@@ -43,3 +43,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char a[] = "Galatasaray";
 	printf("%s",(char *) ft_memcpy(a+1, a, 4));
 }*/
+
+/*int main()
+{
+    char dst[] = "ILEANNAN";
+    printf("%s", ft_memcpy(dst+1, dst, 6));
+}*/

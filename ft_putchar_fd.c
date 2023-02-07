@@ -23,3 +23,4 @@ void	ft_putchar_fd(char c, int fd)
 	fd = open("zzz.txt", O_RDWR | O_CREAT, 0777);
 	ft_putchar_fd('c', fd);
 }*/
+

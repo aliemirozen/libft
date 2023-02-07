@@ -40,3 +40,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	printf("%s\n", a);
 	printf("%s",(char *) ft_memmove(a+1, a, 4));
 }*/
+
+/*int main()
+{
+    char dst[] = "ILEANNAN";
+    printf("%s", ft_memmove(dst+1, dst, 6));
+}*/

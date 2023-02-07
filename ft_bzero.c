@@ -37,3 +37,15 @@ void	ft_bzero(void *s, size_t n)
 	ft_bzero(test, 3);
 	printf("%s", test);
 }*/
+
+/*int main()
+{
+    char s[] = "Galatasaray";
+    ft_bzero(s, 5);
+    printf("%s\n", s);
+    int m = 0;
+    while(m < 11)
+    {
+        printf("%c", s[m++]);
+    }
+}*/

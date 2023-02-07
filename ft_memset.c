@@ -56,3 +56,12 @@ void	*ft_memset(void *b, int c, size_t len)
 		printf("%d\n", b[i++]);
 	}	
 }*/
+
+/*int main()
+{
+    int b[] = {12,34,6,2,34,1};
+    ft_memset(b, 2, sizeof(int)*2);
+    int i = 0;
+    while(i < 6)
+        printf("%d\n", b[i++]);
+}*/
